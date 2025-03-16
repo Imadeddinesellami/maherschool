@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تسجيل المخيم الرمضاني</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: url('background.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: #205781;
+            font-family: 'Cairo', sans-serif;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .form-container {
+            background: #FFFFFF;
+            padding: 40px;
+            border-radius: 15px;
+            border: 2px solid #205781;
+            width: 100%;
+            max-width: 600px;
+            margin: 20px;
+            box-shadow: 0 8px 32px rgba(32, 87, 129, 0.3);
+        }
+        .form-container h2 {
+            color: #205781;
+            font-weight: bold;
+            margin-bottom: 30px;
+            text-align: center;
+            font-size: 2rem;
+        }
+        .form-label {
+            color: #205781;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+        .form-control, .form-select {
+            background: #FFFFFF;
+            border: 2px solid #205781;
+            color: #205781;
+            padding: 12px;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+        .form-control:focus, .form-select:focus {
+            background: #FFFFFF;
+            border-color: #205781;
+            box-shadow: 0 0 8px rgba(32, 87, 129, 0.5);
+        }
+        .btn-primary {
+            background-color: #205781;
+            color: #FFFFFF;
+            border: none;
+            font-weight: bold;
+            width: 100%;
+            padding: 12px;
+            border-radius: 8px;
+            transition: background-color 0.3s ease;
+            margin-top: 20px;
+        }
+        .btn-primary:hover {
+            background-color: #1A456B;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        .form-group:last-child {
+            margin-bottom: 0;
+        }
+
+        /* Media Queries للهواتف المحمولة */
+        @media (max-width: 768px) {
+            .form-container {
+                padding: 20px;
+            }
+            .form-container h2 {
+                font-size: 1.5rem;
+            }
+            .form-label {
+                font-size: 0.9rem;
+            }
+            .form-control, .form-select {
+                padding: 10px;
+                font-size: 0.9rem;
+            }
+            .btn-primary {
+                padding: 10px;
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h2>تسجيل المخيم الرمضاني</h2>
+        <form id="registrationForm">
+            <div class="form-group">
+                <label for="fullName" class="form-label">الاسم واللقب</label>
+                <input type="text" class="form-control" id="fullName" required>
+            </div>
+            <div class="form-group">
+                <label for="birthDate" class="form-label">تاريخ الميلاد</label>
+                <input type="date" class="form-control" id="birthDate" required>
+            </div>
+            <div class="form-group">
+                <label for="birthPlace" class="form-label">مكان الميلاد</label>
+                <input type="text" class="form-control" id="birthPlace" required>
+            </div>
+            <div class="form-group">
+                <label for="educationLevel" class="form-label">المستوى الدراسي</label>
+                <select class="form-select" id="educationLevel" required>
+                  <option value="الطور التمهيدي المستوى الأول">الطور التمهيدي المستوى الأول</option>
+                  <option value="الطور التمهيدي المستوى الثاني">الطور التمهيدي المستوى الثاني</option>
+                  <option value="الطور الأول المستوى الأول">الطور الأول المستوى الأول</option>
+                  <option value="الطور الأول المستوى الثاني">الطور الأول المستوى الثاني</option>
+                  <option value="الطور الأول المستوى الثالث">الطور الأول المستوى الثالث</option>
+                  <option value="الطور الأول المستوى الرابع">الطور الأول المستوى الرابع</option>
+                  <option value="الطور الأول المستوى الخامس">الطور الأول المستوى الخامس</option>
+                  <option value="الطور الأول المستوى السادس">الطور الأول المستوى السادس</option>
+                  <option value="الطور الثاني المستوى الأول">الطور الثاني المستوى الأول</option>
+                  <option value="الطور الثاني المستوى الثاني">الطور الثاني المستوى الثاني</option>
+                  <option value="الطور الثاني المستوى الثالث">الطور الثاني المستوى الثالث</option>
+                  <option value="الطور الثاني المستوى الرابع">الطور الثاني المستوى الرابع</option>
+                  <option value="الطور الثاني المستوى الخامس">الطور الثاني المستوى الخامس</option>
+                  <option value="أفواج الامهات">أفواج الامهات</option>
+                  <option value="أفواج الرجال">أفواج الرجال</option>
+                  <option value="أقسام التحضيري">أقسام التحضيري</option>
+                  <option value="قسم التفسير و التدبر">قسم التفسير و التدبر</option>
+                  <option value="قسم تخريج المعلمين">قسم تخريج المعلمين</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="phone1" class="form-label">رقم الهاتف الأساسي</label>
+                <input type="tel" class="form-control" id="phone1" required>
+            </div>
+            <div class="form-group">
+                <label for="phone2" class="form-label">رقم الهاتف الاحتياطي</label>
+                <input type="tel" class="form-control" id="phone2">
+            </div>
+            <div class="form-group">
+              <label for="quranLevel" class="form-label">كم حزبًا تحفظ من القرآن الكريم؟</label>
+              <input type="number" class="form-control" id="quranLevel" min="1" max="60" required placeholder="أدخل عدد الأحزاب (من 1 إلى 60)">
+          </div>
+          
+            <div class="form-group">
+                <label for="isMember" class="form-label">هل تنتمي إلى مركز الماهر بالقرآن؟</label>
+                <select class="form-select" id="isMember" required>
+                    <option value="نعم">نعم</option>
+                    <option value="لا">لا</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="teacherName" class="form-label">اسم الأستاذالذي تدرس عنده</label>
+                <select class="form-select" id="teacherName" required>
+                  <option value="الشيخ سفيان بوعويرة">الشيخ سفيان بوعويرة</option>
+                  <option value="الشيخ عز الدين مهني">الشيخ عز الدين مهني</option>
+                  <option value="الشيخ سفيان بوديلمي">الشيخ سفيان بوديلمي</option>
+                  <option value="الشيخ الحسين كليل">الشيخ الحسين كليل</option>
+                  <option value="الشيخ الطيب كرميش">الشيخ الطيب كرميش</option>
+                  <option value="الشيخ محمد الأمين عمرون">الشيخ محمد الأمين عمرون</option>
+                  <option value="الشيخ نسيم نويوة">الشيخ نسيم نويوة</option>
+                  <option value="الشيخ محمد الأمين شيخاوي">الشيخ محمد الأمين شيخاوي</option>
+                  <option value="الشيخ محمد عبد الرؤوف دومي">الشيخ محمد عبد الرؤوف دومي</option>
+                  <option value="الشيخ يوسف شيخ">الشيخ يوسف شيخ</option>
+                  <option value="الشيخ سلامي عماد الدين">الشيخ سلامي عماد الدين</option>
+                  <option value="الشيخ اسماعيل جميات">الشيخ اسماعيل جميات</option>
+                  <option value="الشيخ بلبال عبد الوهاب">الشيخ بلبال عبد الوهاب</option>
+                  <option value="الشيخ سعد الدين عمرون">الشيخ سعد الدين عمرون</option>
+                  <option value="الشيخ شنان أسامة">الشيخ شنان أسامة</option>
+                  <option value="الأستاذة غانم نسرين">الأستاذة غانم نسرين</option>
+                  <option value="الأستاذة دعاء صحراوي">الأستاذة دعاء صحراوي</option>
+                  <option value="الأستاذة رزقي نادية">الأستاذة رزقي نادية</option>
+                  <option value="الأستاذة بوساق سهية">الأستاذة بوساق سهية</option>
+                  <option value="الأستاذة بيطار سهيلة">الأستاذة بيطار سهيلة</option>
+                  <option value="الأستاذة صدوق شمس الأصيل">الأستاذة صدوق شمس الأصيل</option>
+                  <option value="الأستاذة بختي سليمة">الأستاذة بختي سليمة</option>
+                  <option value="الأستاذة مرنيز نورة">الأستاذة مرنيز نورة</option>
+                  <option value="الأستاذة محمدي ليلى">الأستاذة محمدي ليلى</option>
+                  <option value="الأستاذة فوزية مهني">الأستاذة فوزية مهني</option>
+                  <option value="الأستاذة بكري سعاد">الأستاذة بكري سعاد</option>
+                  <option value="الأستاذة حموش سعاد">الأستاذة حموش سعاد</option>
+                  <option value="الأستاذة حريزي زيدومة">الأستاذة حريزي زيدومة</option>
+                  <option value="الأستاذة زيدان شهرة">الأستاذة زيدان شهرة</option>
+                  <option value="الأستاذة بلحرش نورة">الأستاذة بلحرش نورة</option>
+                  <option value="الأستاذة روباش رفيدة">الأستاذة روباش رفيدة</option>
+                  <option value="الأستاذة واعري ابتسام">الأستاذة واعري ابتسام</option>
+                  <option value="الأستاذة منار ديلمي">الأستاذة منار ديلمي</option>
+                  <option value="الأستاذة بن حميدة نور الهدى">الأستاذة بن حميدة نور الهدى</option>
+                  <option value="الأستاذة رحالي مريم">الأستاذة رحالي مريم</option>
+                  <option value="الأستاذة رحالي شيماء">الأستاذة رحالي شيماء</option>
+                  <option value="الأستاذة كرميش ريحانة">الأستاذة كرميش ريحانة</option>
+                  <option value="الأستاذة كرميش آمنة">الأستاذة كرميش آمنة</option>
+                  <option value="الأستاذة كرميش سلمى">الأستاذة كرميش سلمى</option>
+                  <option value="الأستاذة ضيف زينب">الأستاذة ضيف زينب</option>
+                  <option value="الأستاذة فاطمة جويبة">الأستاذة فاطمة جويبة</option>
+                  <option value="الأستاذة لينة جويبة">الأستاذة لينة جويبة</option>
+                  <option value="الأستاذة دخوش حليمة">الأستاذة دخوش حليمة</option>
+                  <option value="الأستاذة نهاد بلعجوز">الأستاذة نهاد بلعجوز</option>
+                  <option value="الأستاذة رملي أمينة">الأستاذة رملي أمينة</option>
+                  <option value="الأستاذة رمضاني سلاف">الأستاذة رمضاني سلاف</option>
+                  <option value="الأستاذة بختي أميرة">الأستاذة  بختي اميرة </option>
+                  <option value="الأستاذة سواعدية كريمة">الأستاذة سواعدية كريمة </option>
+
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="category" class="form-label">الفئةالتي تنتمي إليها</label>
+                <select class="form-select" id="category" required>
+                    <option value="نخبة الحفاظ">نخبة الحفاظ</option>
+                    <option value="الخاتمين">الطلبة المقبلين على الختم</option>
+                    <option value="طلبة المركز">طلبة المركز</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="commitment" class="form-label">هل تتعهد بالالتزام بمدة المخيم؟</label>
+                <select class="form-select" id="commitment" required>
+                    <option value="نعم">نعم</option>
+                    <option value="لا">لا</option>
+                </select>
+            </div>
+            <button type="submit" class="btn btn-primary">سجل الآن</button>
+        </form>
+    </div>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Firebase App (الضروري لأي خدمة Firebase) -->
+    <script type="module">
+        // Import the functions you need from the Firebase SDK
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-app.js";
+        import { getDatabase, ref, push } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-database.js";
+
+        // Your web app's Firebase configuration
+        const firebaseConfig = {
+            apiKey: "AIzaSyDGk9_CmKtCyPKLD9zp-Sla35cD0HwjxuQ",
+            authDomain: "mahercomp-2f800.firebaseapp.com",
+            databaseURL: "https://mahercomp-2f800-default-rtdb.firebaseio.com",
+            projectId: "mahercomp-2f800",
+            storageBucket: "mahercomp-2f800.firebasestorage.app",
+            messagingSenderId: "901447924856",
+            appId: "1:901447924856:web:35250ef34001f09dc2818d",
+            measurementId: "G-3RHPY8SQDZ"
+        };
+
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const database = getDatabase(app);
+
+        $(document).ready(function() {
+            $('#registrationForm').submit(function(e) {
+                e.preventDefault(); // منع الإرسال التقليدي للنموذج
+
+                // جمع البيانات من النموذج
+                const formData = {
+                    full_name: $('#fullName').val(),
+                    birth_date: $('#birthDate').val(),
+                    birth_place: $('#birthPlace').val(),
+                    education_level: $('#educationLevel').val(),
+                    phone1: $('#phone1').val(),
+                    phone2: $('#phone2').val(),
+                    quran_level: $('#quranLevel').val(),
+                    is_member: $('#isMember').val(),
+                    teacher_name: $('#teacherName').val(),
+                    category: $('#category').val(),
+                    commitment: $('#commitment').val()
+                };
+
+                console.log("بيانات النموذج:", formData); // طباعة البيانات للتأكد
+
+                // إرسال البيانات إلى Firebase Realtime Database
+                push(ref(database, 'registrations'), formData)
+                    .then(() => {
+                      /*  alert("تم التسجيل بنجاح!");*/
+                        window.location.href = "success.html"; // توجيه المستخدم إلى صفحة النجاح
+                    })
+                    .catch((error) => {
+                        console.error("حدث خطأ أثناء التسجيل:", error); // طباعة الخطأ
+                        alert("حدث خطأ أثناء التسجيل: " + error.message);
+                    });
+            });
+        });
+    </script>
+</body>
+</html>
